@@ -170,26 +170,26 @@ class Manager():
                     'loss': self.best_loss,
                     'epoch': self.last_epoch
                 }
-                if epoch==160:
-                  torch.save(state_dict, f"{self.args.ckpt_dir}/best_ckpt_epoch={epoch}_valid_loss={round(self.best_loss, 4)}.ckpt")
-                  print("*"*10 + "Current best checkpoint is saved." + "*"*10)
-                  print(f"{self.args.ckpt_dir}/best_ckpt_epoch={epoch}_valid_loss={round(self.best_loss, 4)}.ckpt")
+                if epoch==1:
+                   torch.save(state_dict, f"{self.args.ckpt_dir}/best_ckpt_epoch={epoch}_valid_loss={round(self.best_loss, 4)}.ckpt")
+                   print("*"*10 + "Current best checkpoint is saved." + "*"*10)
+                   print(f"{self.args.ckpt_dir}/best_ckpt_epoch={epoch}_valid_loss={round(self.best_loss, 4)}.ckpt")
                 else:
-                  print('not reached the milestons hence not saved checkpoint',epoch)
+                    print('not reached the milestons hence not saved checkpoint',epoch)
               
                 if epoch==200:
-                  torch.save(state_dict, f"{self.args.ckpt_dir}/best_ckpt_epoch={epoch}_valid_loss={round(self.best_loss, 4)}.ckpt")
-                  print("*"*10 + "Current best checkpoint is saved." + "*"*10)
-                  print(f"{self.args.ckpt_dir}/best_ckpt_epoch={epoch}_valid_loss={round(self.best_loss, 4)}.ckpt")
+                   torch.save(state_dict, f"{self.args.ckpt_dir}/best_ckpt_epoch={epoch}_valid_loss={round(self.best_loss, 4)}.ckpt")
+                   print("*"*10 + "Current best checkpoint is saved." + "*"*10)
+                   print(f"{self.args.ckpt_dir}/best_ckpt_epoch={epoch}_valid_loss={round(self.best_loss, 4)}.ckpt")
                 else:
-                  print('not reached the milestons hence not saved checkpoint',epoch)
+                    print('not reached the milestons hence not saved checkpoint',epoch)
 
                 if epoch==280:
-                  torch.save(state_dict, f"{self.args.ckpt_dir}/best_ckpt_epoch={epoch}_valid_loss={round(self.best_loss, 4)}.ckpt")
-                  print("*"*10 + "Current best checkpoint is saved." + "*"*10)
-                  print(f"{self.args.ckpt_dir}/best_ckpt_epoch={epoch}_valid_loss={round(self.best_loss, 4)}.ckpt")
+                   torch.save(state_dict, f"{self.args.ckpt_dir}/best_ckpt_epoch={epoch}_valid_loss={round(self.best_loss, 4)}.ckpt")
+                   print("*"*10 + "Current best checkpoint is saved." + "*"*10)
+                   print(f"{self.args.ckpt_dir}/best_ckpt_epoch={epoch}_valid_loss={round(self.best_loss, 4)}.ckpt")
                 else:
-                  print('not reached the milestons hence not saved checkpoint',epoch)
+                   print('not reached the milestons hence not saved checkpoint',epoch)
 
             print(f"Best valid loss: {self.best_loss}")
             print(f"Valid loss: {valid_loss} || Valid perplexity: {valid_ppl}")
