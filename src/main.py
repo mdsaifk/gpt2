@@ -169,21 +169,7 @@ class Manager():
                     'sched_state_dict': self.sched.state_dict(),
                     'loss': self.best_loss,
                     'epoch': self.last_epoch
-                }
-                if epoch==1:
-                   torch.save(state_dict, f"{self.args.ckpt_dir}/best_ckpt_epoch={epoch}_valid_loss={round(self.best_loss, 4)}.ckpt")
-                   print("*"*10 + "Current best checkpoint is saved." + "*"*10)
-                   print(f"{self.args.ckpt_dir}/best_ckpt_epoch={epoch}_valid_loss={round(self.best_loss, 4)}.ckpt")
-                else:
-                    print('not reached the milestons hence not saved checkpoint',epoch)
-              
-                if epoch==200:
-                   torch.save(state_dict, f"{self.args.ckpt_dir}/best_ckpt_epoch={epoch}_valid_loss={round(self.best_loss, 4)}.ckpt")
-                   print("*"*10 + "Current best checkpoint is saved." + "*"*10)
-                   print(f"{self.args.ckpt_dir}/best_ckpt_epoch={epoch}_valid_loss={round(self.best_loss, 4)}.ckpt")
-                else:
-                    print('not reached the milestons hence not saved checkpoint',epoch)
-
+                }      
                 if epoch==280:
                    torch.save(state_dict, f"{self.args.ckpt_dir}/best_ckpt_epoch={epoch}_valid_loss={round(self.best_loss, 4)}.ckpt")
                    print("*"*10 + "Current best checkpoint is saved." + "*"*10)
